@@ -8,7 +8,7 @@ resource "aws_instance" "web" {
     Name = "HelloWorld"
   }
 
-  user_data = file{"${path.module}/ec2_setup.sh"}
+  user_data = file("${path.module}/ec2_setup.sh")
 }
 output "web_id" {
     
